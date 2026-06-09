@@ -1,30 +1,41 @@
-# AFFORDMED Campus Notifications Frontend
+# Frontend Notification System
 
-This is a React + Material UI frontend app built to match the campus notification dashboard design implied by the provided screenshots.
+This repository implements the frontend track for a notification system evaluation.
 
-## Features
-- All Notifications page with filter controls for event, result, and placement updates
-- Priority Inbox page showing the most urgent notifications first
-- Local fallback sample data if the remote notification API is unavailable
-- Live refresh and seen/unseen toggles for each notification
-- Runs on `http://localhost:3000`
+## Repository structure
+- `logging_middleware/` — reusable logging package for structured lifecycle events
+- `notification_system_design.md` — architecture and design notes for the frontend solution
+- `notification_app_fe/` — React + TypeScript application with Material UI styling
+
+## App features
+- All-notifications view with type filters
+- Priority inbox ranked by urgency and recency
+- Reusable logging middleware integrated into the frontend
+- Responsive layout for desktop and mobile views
 
 ## Run locally
 
-1. Install dependencies
+1. Navigate to the frontend folder:
+
+```bash
+cd notification_app_fe
+```
+
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Start the app
+3. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-3. Open `http://localhost:3000`
+4. Open the URL shown in the terminal.
 
 ## Notes
-- The app attempts to fetch from `https://4.224.186.213/evaluation-service/notifications`.
-- If that endpoint is unavailable or returns an error, the app displays local sample notifications.
+- The application imports the root-level logging package from `logging_middleware/`.
+- The `notification_system_design.md` file documents the architecture and logging strategy.
+- The app still uses the evaluation server endpoint for notification fetching.

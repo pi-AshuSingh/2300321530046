@@ -8,3 +8,5 @@ yarn-debug.log*
 yarn-error.log*
 
 images/
+notification_app_fe/node_modules/
+notification_app_fe/dist/
